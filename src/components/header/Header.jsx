@@ -1,0 +1,78 @@
+import React from "react";
+//css
+import "./header.css";
+
+// react icons
+import { HiMenu } from "react-icons/hi";
+import { AiOutlineSearch, AiOutlineShoppingCart } from "react-icons/ai";
+import { CgProfile } from "react-icons/cg";
+
+const header = () => {
+  return (
+    <div className="header">
+      <div className="img-bg"></div>
+
+      <nav>
+        <ul>
+          <li>
+            <a href="#">Anasayfa</a>
+          </li>
+          <li>
+            <a href="#">Hakkımızda</a>
+          </li>
+          <li>
+            <a href="#">Ürünler</a>
+          </li>
+          <li>
+            <a href="#">Iletisim</a>
+          </li>
+        </ul>
+      </nav>
+      <h1 className="baslik">ECOMMERS</h1>
+      <div className="content flex flex-col sm:flex-row  items-center justify-between w-full md:w-4/5">
+        <div className="flex w-full justify-evenly max-md:justify-center  ">
+          <HiMenu size={40} style={{ color: "white" }} />
+
+          <select className="select w-1/8 font-bold  outline-none rounded-sm p-2 bg-selected text-white">
+            <option disabled selected>
+              Change
+            </option>
+            <option>Homer</option>
+            <option>Marge</option>
+            <option>Bart</option>
+            <option>Lisa</option>
+            <option>Maggie</option>
+          </select>
+        </div>
+
+        <div className="flex flex-row w-full max-md:justify-center max-md:my-4">
+          <input
+            type="text"
+            placeholder="Type here"
+            className="input max-md:w-64  w-96 outline-none rounded-l-sm p-2 ml-4 "
+          />
+          <button className="cursor-pointer">
+            <AiOutlineSearch
+              className="border-none rounded-r-sm p-2 "
+              size={40}
+              style={{ color: "white", background: "#f26522" }}
+            />
+          </button>
+        </div>
+        <div className="flex w-full max-md:justify-around ml-4 max-md:absolute">
+          <div className="flex  relative items-center text-white">
+            <p className="font-bold">SEPET</p>
+            <AiOutlineShoppingCart size={50} style={{ color: "white" }} />
+            <p className="text-white  absolute -top-3 -right-1 text-xl">0</p>
+          </div>
+          <div className="ml-6 flex items-center text-white">
+            <p className="font-bold">Profile</p>
+            <CgProfile size={50} style={{ color: "white" }} />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default header;
