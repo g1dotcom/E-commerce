@@ -72,14 +72,16 @@ const Header = () => {
             />
           </button>
         </div>
-        <div className="flex w-full max-md:justify-around ml-4 ">
-          <div className="flex  relative items-center text-white">
-            <p className="font-bold">SEPET</p>
+        <div className="flex w-full max-md:justify-around ml-4 max-sm:absolute max-md:top-1  ">
+          <div className="flex  relative items-center text-white max-sm:-left-14">
+            <p className="font-bold max-sm:hidden">SEPET</p>
             <AiOutlineShoppingCart size={50} style={{ color: "white" }} />
-            <p className="text-white  absolute -top-3 -right-1 text-xl">0</p>
+            <p className="text-yellow-700 font-bold z-10  absolute top-0  right-4 text-lg">
+              0
+            </p>
           </div>
-          <div className="ml-6 flex items-center text-white">
-            <p className="font-bold">PROFIL</p>
+          <div className="ml-6 flex items-center text-white max-sm:-mr-24 ">
+            <p className="font-bold ">PROFIL</p>
             <CgProfile size={50} style={{ color: "white" }} />
           </div>
         </div>
