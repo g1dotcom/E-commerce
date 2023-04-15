@@ -3,6 +3,7 @@ import React, { useState } from "react";
 //components
 
 import Menu from "../menu/Menu";
+import Slider from "../slider/Slider";
 
 //css
 import "./header.css";
@@ -14,6 +15,7 @@ import { CgProfile } from "react-icons/cg";
 
 const Header = () => {
   const [show, setShow] = useState(true);
+
   return (
     <div className="header">
       <Menu show={show} setShow={setShow} />
@@ -85,6 +87,9 @@ const Header = () => {
             <CgProfile size={50} style={{ color: "white" }} />
           </div>
         </div>
+      </div>
+      <div className="flex justify-center items-center w-full h-full z-40">
+        <Slider />
       </div>
     </div>
   );

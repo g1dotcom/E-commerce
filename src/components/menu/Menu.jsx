@@ -7,7 +7,7 @@ import { GiCancel } from "react-icons/gi";
 const Menu = ({ show, setShow }) => {
   return (
     <div
-      className={`bg-black absolute top-0 left-0 w-1/4 h-screen flex flex-col z-30 ${
+      className={`bg-black absolute top-0 left-0 w-1/4 h-screen flex flex-col z-50 ${
         show
           ? "block transition-all duration-500   "
           : "hidden transition-all duration-500 "
