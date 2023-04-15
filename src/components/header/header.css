@@ -56,6 +56,7 @@ li a {
   background-position: center;
   width: 400px;
   height: 400px;
+  z-index: 50;
 }
 
 .baslik {
@@ -69,4 +70,21 @@ li a {
 .bg-selected {
   background-color: #2b2a29;
   letter-spacing: 2px;
+}
+
+/* responsive */
+@media (max-width: 1050px) {
+  .input {
+    width: 18rem;
+  }
+}
+@media (max-width: 970px) {
+  .input {
+    width: 16rem;
+  }
+}
+@media (max-width: 880px) {
+  .input {
+    width: 14rem;
+  }
 }
