@@ -1,4 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
+
+//components
+
+import Menu from "../menu/Menu";
+
 //css
 import "./header.css";
 
@@ -7,9 +12,12 @@ import { HiMenu } from "react-icons/hi";
 import { AiOutlineSearch, AiOutlineShoppingCart } from "react-icons/ai";
 import { CgProfile } from "react-icons/cg";
 
-const header = () => {
+const Header = () => {
+  const [show, setShow] = useState(true);
   return (
     <div className="header">
+      <Menu show={show} setShow={setShow} />
+
       <div className="img-bg"></div>
 
       <nav>
@@ -30,10 +38,15 @@ const header = () => {
       </nav>
       <h1 className="baslik">ECOMMERS</h1>
       <div className="content flex flex-col sm:flex-row  items-center justify-between w-full md:w-4/5">
-        <div className="flex w-full justify-evenly max-md:justify-center  ">
-          <HiMenu size={40} style={{ color: "white" }} />
+        <div className="flex w-full justify-evenly   ">
+          <button
+            className="cursor-pointer z-10 max-md:absolute max-md:top-1 max-md:left-2"
+            onClick={() => setShow(!show)}
+          >
+            <HiMenu size={40} style={{ color: "white" }} />
+          </button>
 
-          <select className="select w-1/8 font-bold  outline-none rounded-sm p-2 bg-selected text-white">
+          <select className="select w-1/8 font-bold  outline-none rounded-sm p-2 bg-selected text-white  ">
             <option disabled selected>
               Change
             </option>
@@ -49,7 +62,7 @@ const header = () => {
           <input
             type="text"
             placeholder="Type here"
-            className="input max-md:w-64  w-96 outline-none rounded-l-sm p-2 ml-4 "
+            className="input w-96 outline-none rounded-l-sm p-2 ml-4 "
           />
           <button className="cursor-pointer">
             <AiOutlineSearch
@@ -59,14 +72,14 @@ const header = () => {
             />
           </button>
         </div>
-        <div className="flex w-full max-md:justify-around ml-4 max-md:absolute">
+        <div className="flex w-full max-md:justify-around ml-4 ">
           <div className="flex  relative items-center text-white">
             <p className="font-bold">SEPET</p>
             <AiOutlineShoppingCart size={50} style={{ color: "white" }} />
             <p className="text-white  absolute -top-3 -right-1 text-xl">0</p>
           </div>
           <div className="ml-6 flex items-center text-white">
-            <p className="font-bold">Profile</p>
+            <p className="font-bold">PROFIL</p>
             <CgProfile size={50} style={{ color: "white" }} />
           </div>
         </div>
@@ -75,4 +88,4 @@ const header = () => {
   );
 };
 
-export default header;
+export default Header;
