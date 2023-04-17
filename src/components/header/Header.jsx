@@ -36,7 +36,7 @@ const Header = () => {
           </li>
         </ul>
       </nav>
-      <h1 className="baslik">ECOMMERS</h1>
+      <h1 className="baslik max-md:text-4xl">ECOMMERS</h1>
       <div className="content flex flex-col sm:flex-row  items-center justify-between w-full md:w-4/5">
         <div className="flex w-full justify-evenly   ">
           <button
