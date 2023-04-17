@@ -49,14 +49,15 @@ li a {
 
 .img-bg {
   position: absolute;
+  right: 60px;
   bottom: 0;
   background-image: url(../../../public/bg.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  width: 400px;
+  width: 20%;
   height: 400px;
-  z-index: 30;
+  z-index: 50;
 }
 
 .baslik {
@@ -77,41 +78,19 @@ li a {
   .input {
     width: 18rem;
   }
-  .img-bg {
-    position: absolute;
-
-    width: 350px;
-    height: 350px;
-  }
 }
 @media (max-width: 970px) {
   .input {
     width: 16rem;
-  }
-  .img-bg {
-    position: absolute;
-
-    width: 350px;
-    height: 350px;
   }
 }
 @media (max-width: 880px) {
   .input {
     width: 14rem;
   }
-  .img-bg {
-    position: absolute;
-    width: 350px;
-    height: 350px;
-  }
 }
 @media (max-width: 750px) {
   .input {
     width: 14rem;
-  }
-  .img-bg {
-    position: absolute;
-    width: 310px;
-    height: 310px;
   }
 }

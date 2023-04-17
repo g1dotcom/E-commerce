@@ -3,7 +3,6 @@ import React, { useState } from "react";
 //components
 
 import Menu from "../menu/Menu";
-import Slider from "../slider/Slider";
 
 //css
 import "./header.css";
@@ -12,6 +11,7 @@ import "./header.css";
 import { HiMenu } from "react-icons/hi";
 import { AiOutlineSearch, AiOutlineShoppingCart } from "react-icons/ai";
 import { CgProfile } from "react-icons/cg";
+import SliderComp from "../slider/SliderComp";
 
 const Header = () => {
   const [show, setShow] = useState(true);
@@ -19,8 +19,6 @@ const Header = () => {
   return (
     <div className="header">
       <Menu show={show} setShow={setShow} />
-
-      <div className="img-bg"></div>
 
       <nav>
         <ul>
@@ -78,8 +76,8 @@ const Header = () => {
           <div className="flex  relative items-center text-white max-sm:-left-14">
             <p className="font-bold max-sm:hidden">SEPET</p>
             <AiOutlineShoppingCart size={50} style={{ color: "white" }} />
-            <p className="text-yellow-700 font-bold z-10  absolute top-0  right-4 text-lg">
-              0
+            <p className="textwhite font-bold z-10  absolute top-0  right-3 text-base bg-red-500 rounded-full px-1">
+              2
             </p>
           </div>
           <div className="ml-6 flex items-center text-white max-sm:-mr-24 ">
@@ -88,8 +86,8 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-center items-center w-full h-full z-40">
-        <Slider />
+      <div className="flex items-end justify-center  w-full h-full z-30  ">
+        <SliderComp />
       </div>
     </div>
   );
