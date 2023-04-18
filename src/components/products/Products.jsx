@@ -1,6 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
+
+//redux
+import { useDispatch, useSelector } from "react-redux";
+import { getProducts } from "../../redux/productSlice";
 
 const Products = () => {
+  const dispatch = useDispatch();
+  const { products, productsStatus } = useSelector((state) => state.products);
+
+  useEffect(() => {
+    dispatch(getProducts());
+  });
+
   return <div className="">ffff</div>;
 };
 
