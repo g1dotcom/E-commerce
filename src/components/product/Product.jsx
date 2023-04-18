@@ -7,7 +7,7 @@ const Product = ({ product }) => {
   console.log(product);
 
   return (
-    <div className="w-[400px] p-2 m-2 border rounded-md relative">
+    <div className="w-[350px] p-2 m-2 border rounded-md relative">
       <div className="absolute top-0 right-0 p-2 categoriesbaslık flex items-center rounded-md">
         <FaMoneyBillWave style={{ color: "white" }} /> {product?.price} TL
       </div>
