@@ -10,7 +10,7 @@ const Home = () => {
     <div>
       <Header />
 
-      <div className="flex p-12 bg-gray-100 h-screen">
+      <div className="flex p-12 bg-gray-100 h-auto">
         <div className="w-1/6 p-2">
           <Categories />
         </div>

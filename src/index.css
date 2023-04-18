@@ -36,3 +36,21 @@ body * {
     #ffe259
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+
+/* paginate */
+
+.paginate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f37335;
+}
+.paginate li {
+  width: 30px;
+  height: 30px;
+  border: 1px solid white;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
