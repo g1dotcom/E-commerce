@@ -10,15 +10,19 @@ import ReactPaginate from "react-paginate";
 
 //redux
 import { useDispatch, useSelector } from "react-redux";
-import { getProducts } from "../../redux/productSlice";
+import { getCategoryProducts, getProducts } from "../../redux/productSlice";
 
-const Products = () => {
+const Products = ({ category }) => {
   const dispatch = useDispatch();
   const { products, productsStatus } = useSelector((state) => state.products);
 
   useEffect(() => {
-    dispatch(getProducts());
-  }, [dispatch]);
+    if (category) {
+      dispatch(getCategoryProducts(category));
+    } else {
+      dispatch(getProducts());
+    }
+  }, [dispatch, category]);
 
   //pagination
   const [itemOffset, setItemOffset] = useState(0);
