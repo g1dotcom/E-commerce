@@ -2,10 +2,17 @@ import React from "react";
 
 //icons
 import { FaMoneyBillWave } from "react-icons/fa";
+//router
+import { useNavigate } from "react-router-dom";
 
 const Product = ({ product }) => {
+  const navigate = useNavigate();
+
   return (
-    <div className="w-[350px] p-2 m-2 border rounded-md relative">
+    <div
+      onClick={() => navigate(`products/${product?.id}`)}
+      className="w-[350px] p-2 m-2 border rounded-md relative"
+    >
       <div className="absolute top-0 right-0 p-2 categoriesbaslık flex items-center rounded-md">
         <FaMoneyBillWave style={{ color: "white" }} /> {product?.price} TL
       </div>

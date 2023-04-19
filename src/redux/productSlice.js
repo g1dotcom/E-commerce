@@ -4,6 +4,8 @@ import { STATUS } from "../utils/status";
 const initialState = {
   products: [],
   productsStatus: STATUS.IDLE,
+  productDetail: [],
+  productDetailStatus: STATUS.IDLE,
 };
 
 export const getProducts = createAsyncThunk("getproducts", async () => {

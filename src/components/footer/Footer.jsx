@@ -5,7 +5,7 @@ import { BsGithub, BsLinkedin, BsTwitter } from "react-icons/bs";
 
 const Footer = () => {
   return (
-    <div className="w-full flex flex-col items-center justify-center">
+    <div className="w-full flex flex-col items-center justify-center ">
       <div className="flex w-1/4 justify-evenly p-5 font-bold">
         <h1>Hakkımızda</h1>
         <h1>İletişim</h1>
