@@ -5,7 +5,7 @@ const Rating = ({ productDetail }) => {
     Array.from({ length: 5 }, (_, i) => i < productDetail?.rating?.rate)
   );
   return (
-    <div>
+    <div className="bg-gray-300 mx-2 rounded-lg">
       {stars.map((filled, i) => (
         <span key={i} style={{ color: filled ? "orange" : "gray" }}>
           &#9733;
