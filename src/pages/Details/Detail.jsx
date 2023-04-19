@@ -7,6 +7,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { getDetailProduct } from "../../redux/productDetailSlice";
 
+//Components
+import DetailComp from "../../components/detailComp/DetailComp";
+import Loading from "../../components/Loading";
+import Navbar from "../../components/navbar/Navbar";
+
 const Detail = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
@@ -20,7 +25,20 @@ const Detail = () => {
 
   console.log(productDetail);
 
-  return <div className="bg-black w-full h-full">aaaaaaaaaaaaaaaaaa</div>;
+  return (
+    <div className="">
+      {productDetailStatus == "LOADING" ? (
+        <Loading />
+      ) : (
+        <>
+          <div className="bg-orange-400 flex justify-center items-end w-full">
+            <Navbar />
+          </div>
+          <DetailComp productDetail={productDetail} />
+        </>
+      )}
+    </div>
+  );
 };
 
 export default Detail;
