@@ -19,8 +19,8 @@ const SliderComp = () => {
   const settings = {
     infinite: true,
     speed: 500,
-    autoplay: false,
-    autoplaySpeed: 2000,
+    autoplay: true,
+    autoplaySpeed: 3000,
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,

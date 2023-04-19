@@ -4,15 +4,21 @@ import React, { useEffect, useState } from "react";
 import { AiOutlineSearch, AiOutlineShoppingCart } from "react-icons/ai";
 import { CgProfile } from "react-icons/cg";
 import { HiMenu } from "react-icons/hi";
+
 //redux
 import { getCartTotal } from "../../redux/cartSlice";
 import { useDispatch, useSelector } from "react-redux";
 
+//navigate(router-dom)
+import { useNavigate } from "react-router-dom";
+
+// // // // // // // // // // // // //
 const Navbar = ({ show, setShow }) => {
   const dispatch = useDispatch();
   const { carts } = useSelector((state) => state.carts);
 
-  console.log(carts);
+  //navigate
+  const navigate = useNavigate();
 
   useEffect(() => {
     dispatch(getCartTotal());
@@ -54,14 +60,22 @@ const Navbar = ({ show, setShow }) => {
       <div className="flex w-full max-md:justify-around ml-4 max-sm:absolute max-md:top-1  ">
         <div className="flex  relative items-center text-white max-sm:-left-14">
           <p className="font-bold max-sm:hidden">SEPET</p>
-          <AiOutlineShoppingCart size={50} style={{ color: "white" }} />
-          <p className="textwhite font-bold z-10  absolute top-0  right-3 text-base bg-red-500 rounded-full px-1">
+          <AiOutlineShoppingCart
+            size={30}
+            style={{ color: "white" }}
+            onClick={() => navigate("/cart")}
+            className="cursor-pointer"
+          />
+          <p
+            onClick={() => navigate("/cart")}
+            className="text-white font-bold z-10 cursor-pointer absolute -top-2  right-1 text-sm bg-red-500 rounded-full px-1"
+          >
             {carts?.length}
           </p>
         </div>
         <div className="ml-6 flex items-center text-white max-sm:-mr-24 ">
           <p className="font-bold ">PROFIL</p>
-          <CgProfile size={50} style={{ color: "white" }} />
+          <CgProfile size={30} style={{ color: "white" }} />
         </div>
       </div>
     </div>
