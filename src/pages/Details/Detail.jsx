@@ -34,7 +34,9 @@ const Detail = () => {
           <div className="bg-orange-400 flex justify-center items-end w-full">
             <Navbar />
           </div>
-          <DetailComp productDetail={productDetail} />
+          <div className="p-16 ">
+            <DetailComp productDetail={productDetail} />
+          </div>
         </>
       )}
     </div>
