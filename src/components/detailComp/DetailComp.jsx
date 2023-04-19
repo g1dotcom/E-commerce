@@ -49,7 +49,7 @@ const DetailComp = ({ productDetail }) => {
           <input
             type="text"
             value={quantity}
-            className="w-5 text-center text-4xl font-bold bg-gray-100 text-gray-600 m-2"
+            className="w-12 text-center text-4xl font-bold bg-gray-100 text-gray-600 m-2"
           />
           <div
             onClick={increment}
@@ -58,7 +58,10 @@ const DetailComp = ({ productDetail }) => {
             +
           </div>
         </div>
-        <div className="my-4 border w-full text-2xl rounded-md bg-orange-400 text-white cursor-pointer h-16 flex items-center justify-center">
+        <div
+          onClick={addBasket}
+          className="my-4 border w-full text-2xl rounded-md bg-orange-400 text-white cursor-pointer h-16 flex items-center justify-center"
+        >
           Sepete Ekle
         </div>
       </div>
