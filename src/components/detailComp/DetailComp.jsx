@@ -1,8 +1,14 @@
 import React, { useState } from "react";
 
+//Components
 import Rating from "../rating/Rating";
 
+//Redux
+import { addToCart } from "../../redux/cartSlice";
+import { useDispatch } from "react-redux";
+
 const DetailComp = ({ productDetail }) => {
+  const dispatch = useDispatch();
   const [quantity, setQuantity] = useState(0);
 
   const increment = () => {
@@ -13,6 +19,18 @@ const DetailComp = ({ productDetail }) => {
     if (quantity > 0) {
       setQuantity(quantity - 1);
     }
+  };
+
+  const addBasket = () => {
+    dispatch(
+      addToCart({
+        id: productDetail?.id,
+        title: productDetail?.title,
+        price: productDetail?.price,
+        image: productDetail?.image,
+        quantity: quantity,
+      })
+    );
   };
 
   return (

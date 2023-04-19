@@ -1,11 +1,23 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 //icons
 import { AiOutlineSearch, AiOutlineShoppingCart } from "react-icons/ai";
 import { CgProfile } from "react-icons/cg";
 import { HiMenu } from "react-icons/hi";
+//redux
+import { getCartTotal } from "../../redux/cartSlice";
+import { useDispatch, useSelector } from "react-redux";
 
 const Navbar = ({ show, setShow }) => {
+  const dispatch = useDispatch();
+  const { carts } = useSelector((state) => state.carts);
+
+  console.log(carts);
+
+  useEffect(() => {
+    dispatch(getCartTotal());
+  }, [dispatch]);
+
   return (
     <div className="content flex flex-col sm:flex-row  items-center justify-between w-full md:w-4/5">
       <div className="flex w-full justify-evenly   ">
@@ -44,7 +56,7 @@ const Navbar = ({ show, setShow }) => {
           <p className="font-bold max-sm:hidden">SEPET</p>
           <AiOutlineShoppingCart size={50} style={{ color: "white" }} />
           <p className="textwhite font-bold z-10  absolute top-0  right-3 text-base bg-red-500 rounded-full px-1">
-            2
+            {carts?.length}
           </p>
         </div>
         <div className="ml-6 flex items-center text-white max-sm:-mr-24 ">
