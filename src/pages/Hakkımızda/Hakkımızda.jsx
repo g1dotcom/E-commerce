@@ -7,7 +7,7 @@ const Hakkımızda = () => {
       <div className="bg-orange-400 flex justify-center py-4 items-end w-full absolute top-0">
         <Navbar />
       </div>
-      <h1 className="text-4xl font-bold text-orange-400 my-4">
+      <h1 className="text-4xl font-bold text-orange-400 mt-20 my-4">
         Neler Yapıyoruz ?{" "}
       </h1>
       <img

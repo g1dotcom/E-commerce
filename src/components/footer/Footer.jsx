@@ -10,10 +10,10 @@ const Footer = () => {
   return (
     <div className="w-full flex flex-col items-center justify-center bg-gray-50 ">
       <div className="flex w-1/4 justify-evenly max-md:justify-around max-md:w-full p-5 font-bold">
-        <h1>Hakkımızda</h1>
-        <h1>İletişim</h1>
-        <h1>Ürünlermiz</h1>
-        <h1>Hakkımızda</h1>
+        <Link to={"/"}> Anasayfa</Link>
+        <Link to={"/iletisim"}> İletişim</Link>
+        <Link to={"/hakkımızda"}> Hakkımızda</Link>
+        <Link to={"/cart"}> Sepetim</Link>
       </div>
       <div className="flex w-1/6 justify-evenly max-md:justify-around max-md:w-full p-5">
         <Link

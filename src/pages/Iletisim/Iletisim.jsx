@@ -7,7 +7,7 @@ const Iletisim = () => {
       <div className="bg-orange-400 flex justify-center py-4 items-end w-full absolute top-0">
         <Navbar />
       </div>
-      <div className="w-1/3 h-2/3 flex flex-col justify-evenly items-center bg-orange-100 rounded-lg p-4 shadow-2xl shadow-orange-500">
+      <div className="w-1/3 max-md:w-5/6 max-md:mt-10 h-2/3 flex flex-col justify-evenly items-center bg-orange-100 rounded-lg p-4 shadow-2xl shadow-orange-500">
         <div className="form-control">
           <label className="input-group">
             <span className="bg-orange-400 text-white">İsim</span>

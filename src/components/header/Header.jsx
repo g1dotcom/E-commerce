@@ -31,7 +31,9 @@ const Header = () => {
         </ul>
       </nav>
       <h1 className="baslik max-md:text-4xl max-md:mt-2">ECOMMERS</h1>
+
       <Navbar />
+
       <div className="flex items-end justify-center  w-full h-full z-20  ">
         <SliderComp />
       </div>

@@ -27,9 +27,9 @@ const Navbar = () => {
 
   const [show, setShow] = useState(false);
   return (
-    <div className="content flex flex-col sm:flex-row  items-center justify-between w-full md:w-4/5">
-      <div className="flex w-full justify-evenly">
-        <button className="cursor-pointer z-10 max-md:absolute max-md:top-1 max-md:left-2">
+    <div className=" flex flex-col sm:flex-row  items-center justify-between w-full md:w-4/5">
+      <div className="flex  justify-evenly ">
+        <button className="cursor-pointer  z-10 max-md:absolute max-md:top-1 max-md:left-2">
           <HiMenu
             onClick={() => setShow(!show)}
             size={40}
@@ -67,7 +67,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div className="flex flex-row w-full max-md:justify-center max-md:my-4">
+      <div className="flex  flex-row  max-md:justify-center max-md:my-4">
         <input
           type="text"
           placeholder="Type here"
@@ -88,7 +88,7 @@ const Navbar = () => {
         >
           <p className="font-bold max-md:hidden ">SEPET</p>
           <AiOutlineShoppingCart size={35} style={{ color: "white" }} />
-          <p className="text-white font-bold z-10 cursor-pointer absolute top-1 max-md:-top-1  right-1 text-sm bg-red-500 rounded-full px-1">
+          <p className="text-white font-bold z-10 cursor-pointer absolute -top-2 max-md:-top-1  -right-1 text-xs bg-red-500 rounded-full px-1">
             {carts?.length}
           </p>
         </div>
