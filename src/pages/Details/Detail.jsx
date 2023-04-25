@@ -31,7 +31,7 @@ const Detail = () => {
         <Loading />
       ) : (
         <>
-          <div className="bg-orange-400 flex justify-center items-end w-full">
+          <div className="bg-orange-400 flex justify-center py-4 items-end w-full">
             <Navbar />
           </div>
           <div className="p-16 ">
