@@ -58,7 +58,7 @@ const Navbar = () => {
               <Link to={"/cart"}> Sepetim</Link>
             </li>
             <li className="cursor-pointer">
-              <Link to={"/"}> Ürünler</Link>
+              <Link to={"/hakkımızda"}> Hakkımızda</Link>
             </li>
             <li className="cursor-pointer">
               <Link to={"/"}> İletişim</Link>

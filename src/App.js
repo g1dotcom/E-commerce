@@ -8,6 +8,8 @@ import Cart from "./pages/Cart/Cart";
 
 //router
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Hakkımızda from "./pages/Hakkımızda/Hakkımızda";
+import Iletisim from "./pages/Iletisim/Iletisim";
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/products/:id" element={<Detail />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/hakkımızda" element={<Hakkımızda />} />
+          <Route path="/iletisim" element={<Iletisim />} />
         </Routes>
 
         <Footer />
