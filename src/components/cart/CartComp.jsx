@@ -23,7 +23,7 @@ const CartComp = ({ cart }) => {
       </div>
       <button
         onClick={() =>
-          dispatch(removeFromCart(cart?.id)) + window.location.reload
+          dispatch(removeFromCart(cart?.id)) + window.location.reload()
         }
         className="bg-orange-500 px-5 py-2 rounded-md text-white"
       >

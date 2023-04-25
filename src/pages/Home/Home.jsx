@@ -5,13 +5,14 @@ import Header from "../../components/header/Header";
 import Categories from "../../components/categories/Categories";
 import Products from "../../components/products/Products";
 import Sorting from "../../components/sorting/Sorting";
+import Footer from "../../components/footer/Footer";
 
 const Home = () => {
   const [category, setCategory] = useState("");
   const [sort, setSort] = useState("");
 
   return (
-    <div>
+    <div className="">
       <Header />
       <div className="flex items-end justify-end bg-orange-400 py-2 mt-10 mx-12 ">
         <Sorting setSort={setSort} />
