@@ -32,10 +32,15 @@ const Cart = () => {
         <Navbar />
       </div>
       {carts?.length > 0 ? (
-        <div>
-          {carts?.map((cart, i) => (
-            <CartComp key={i} cart={cart} />
-          ))}
+        <div className="flex  w-full h-full ">
+          <div className="w-3/4 h-full p-6">
+            {carts?.map((cart, i) => (
+              <CartComp key={i} cart={cart} />
+            ))}
+          </div>
+          <div className="w-1/4 h-full my-10 p-6 bg-gray-400">
+            Toplam Fiyat: {totalAmount} TL
+          </div>
         </div>
       ) : (
         <div>Sepetiniz Ürün yok</div>
