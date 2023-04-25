@@ -11,14 +11,14 @@ const Product = ({ product }) => {
   return (
     <div
       onClick={() => navigate(`products/${product?.id}`)}
-      className="w-[350px] p-2 m-2 border rounded-md relative"
+      className="w-[350px] max-md:w-[150px] p-2 m-2 border rounded-md relative"
     >
       <div className="absolute top-0 right-0 p-2 categoriesbaslık flex items-center rounded-md">
         <FaMoneyBillWave style={{ color: "white" }} /> {product?.price} TL
       </div>
 
       <img
-        className="w-[200px] h-[200px] object-cover m-auto"
+        className="w-[200px] h-[200px] max-md:w-[100px] max-md:h-[100px] object-cover m-auto"
         src={product?.image}
         alt=""
       />

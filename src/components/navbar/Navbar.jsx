@@ -27,7 +27,10 @@ const Navbar = ({ show, setShow }) => {
   return (
     <div className="content flex flex-col sm:flex-row  items-center justify-between w-full md:w-4/5">
       <div className="flex w-full justify-evenly   ">
-        <button className="cursor-pointer z-10 max-md:absolute max-md:top-1 max-md:left-2">
+        <button
+          onClick={() => setShow(!show)}
+          className="cursor-pointer z-10 max-md:absolute max-md:top-1 max-md:left-2"
+        >
           <HiMenu size={40} style={{ color: "white" }} />
         </button>
 

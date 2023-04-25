@@ -12,7 +12,7 @@ const Categories = ({ setCategory }) => {
 
   return (
     <div className="categories flex flex-col justify-center items-center ">
-      <div className="text-2xl categoriesbaslık p-2 w-full text-white  text-center ">
+      <div className="text-2xl categoriesbaslık p-2 w-full text-white  text-center max-md:text-base">
         KATEGORİLER
       </div>
 

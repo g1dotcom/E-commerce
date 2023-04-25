@@ -22,7 +22,7 @@ const Header = () => {
       <nav>
         <ul>
           <li>
-            <a href="#">Anasayfa</a>
+            <a href="/">Anasayfa</a>
           </li>
           <li>
             <a href="#">Hakkımızda</a>

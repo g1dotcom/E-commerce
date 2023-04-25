@@ -8,6 +8,7 @@ import Cart from "./pages/Cart/Cart";
 
 //router
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Menu from "./components/menu/Menu";
 
 function App() {
   return (
