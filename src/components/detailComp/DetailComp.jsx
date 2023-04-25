@@ -9,14 +9,14 @@ import { useDispatch } from "react-redux";
 
 const DetailComp = ({ productDetail }) => {
   const dispatch = useDispatch();
-  const [quantity, setQuantity] = useState(0);
+  const [quantity, setQuantity] = useState(1);
 
   const increment = () => {
     setQuantity(quantity + 1);
   };
 
   const decrement = () => {
-    if (quantity > 0) {
+    if (quantity > 1) {
       setQuantity(quantity - 1);
     }
   };
