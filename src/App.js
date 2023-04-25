@@ -3,7 +3,7 @@ import Footer from "./components/footer/Footer";
 
 //pages
 import Home from "./pages/Home/Home";
-import Detail from "./pages/Details/Detail";
+import Details from "./pages/Details/Details";
 import Cart from "./pages/Cart/Cart";
 
 //router
@@ -17,7 +17,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/products/:id" element={<Detail />} />
+          <Route path="/products/:id" element={<Details />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/hakkımızda" element={<Hakkımızda />} />
           <Route path="/iletisim" element={<Iletisim />} />

@@ -9,10 +9,10 @@ import { getDetailProduct } from "../../redux/productDetailSlice";
 
 //Components
 import DetailComp from "../../components/detailComp/DetailComp";
-import Loading from "../../components/Loading";
+import Loading from "../../components/Loading.jsx";
 import Navbar from "../../components/navbar/Navbar";
 
-const Detail = () => {
+const Details = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
   const { productDetail, productDetailStatus } = useSelector(
@@ -27,7 +27,7 @@ const Detail = () => {
 
   return (
     <div className="">
-      {productDetailStatus == "LOADING" ? (
+      {productDetailStatus === "LOADING" ? (
         <Loading />
       ) : (
         <>
@@ -43,4 +43,4 @@ const Detail = () => {
   );
 };
 
-export default Detail;
+export default Details;

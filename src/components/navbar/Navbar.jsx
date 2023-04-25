@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 //icons
 import { AiOutlineSearch, AiOutlineShoppingCart } from "react-icons/ai";
-import { CgProfile } from "react-icons/cg";
+
 import { HiMenu } from "react-icons/hi";
 
 //redux
@@ -27,7 +27,7 @@ const Navbar = () => {
 
   const [show, setShow] = useState(false);
   return (
-    <div className=" flex flex-col sm:flex-row  items-center justify-between w-full md:w-4/5">
+    <div className=" flex flex-col sm:flex-row  items-center justify-around w-full md:w-4/5">
       <div className="flex  justify-evenly ">
         <button className="cursor-pointer  z-10 max-md:absolute max-md:top-1 max-md:left-2">
           <HiMenu
