@@ -9,7 +9,7 @@ import { getDetailProduct } from "../../redux/productDetailSlice";
 
 //Components
 import DetailComp from "../../components/detailComp/DetailComp";
-import Loading from "../../components/Loading.jsx";
+import Loading from "../../components/loading/Loading.jsx";
 import Navbar from "../../components/navbar/Navbar";
 
 const Details = () => {

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 //Loading
-import Loading from "../Loading";
+import Loading from "../loading/Loading";
 //components
 import Product from "../product/Product";
 
@@ -45,7 +45,7 @@ const Products = ({ category, sort }) => {
 
   return (
     <div className="">
-      {productsStatus == "LOADING" ? (
+      {productsStatus === "LOADING" ? (
         <Loading />
       ) : (
         <>
