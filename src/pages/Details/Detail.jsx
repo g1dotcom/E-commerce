@@ -11,7 +11,6 @@ import { getDetailProduct } from "../../redux/productDetailSlice";
 import DetailComp from "../../components/detailComp/DetailComp";
 import Loading from "../../components/Loading";
 import Navbar from "../../components/navbar/Navbar";
-import Menu from "../../components/menu/Menu";
 
 const Detail = () => {
   const { id } = useParams();

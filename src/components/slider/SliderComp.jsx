@@ -27,9 +27,9 @@ const SliderComp = () => {
   };
 
   return (
-    <div className="w-full ">
+    <div className="w-full !z-20 ">
       <Slider {...settings}>
-        <div className="  !h-full !w-full max-md:flex-row !flex md:flex-row flex-col !items-center !justify-evenly !text-white text-xl md:text-2xl lg:text-3xl xl:text-4xl ">
+        <div className=" !z-20 !h-full !w-full max-md:flex-row !flex md:flex-row flex-col !items-center !justify-evenly !text-white text-xl md:text-2xl lg:text-3xl xl:text-4xl ">
           <div className="flex md:flex-row flex-col items-center justify-center">
             <img
               src={Img1}
@@ -55,7 +55,7 @@ const SliderComp = () => {
             <img src={Img2} alt="" className="md:w-96 w-80 h-auto  " />
           </div>
         </div>
-        <div className="  !h-full !w-full max-md:flex-row-reverse !flex md:flex-row-reverse flex-col !items-center !justify-evenly !text-white xl:text-4xl text-xl md:text-2xl lg:text-3xl">
+        <div className=" !z-20 !h-full !w-full max-md:flex-row-reverse !flex md:flex-row-reverse flex-col !items-center !justify-evenly !text-white xl:text-4xl text-xl md:text-2xl lg:text-3xl">
           <div className="flex md:flex-row-reverse flex-col items-center justify-center">
             <img
               src={Img3}
@@ -97,7 +97,7 @@ const SliderComp = () => {
             <img src={Img4} alt="" className="md:w-96 w-80 h-auto " />
           </div>
         </div>
-        <div className="  !h-full !w-full max-md:flex-row !flex md:flex-row flex-col !items-center !justify-evenly !text-white xl:text-4xl text-xl md:text-2xl lg:text-3xl">
+        <div className=" !z-20 !h-full !w-full max-md:flex-row !flex md:flex-row flex-col !items-center !justify-evenly !text-white xl:text-4xl text-xl md:text-2xl lg:text-3xl">
           <div className="flex md:flex-row flex-col items-center justify-center">
             <img
               src={Img5}

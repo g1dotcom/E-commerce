@@ -5,7 +5,6 @@ import Header from "../../components/header/Header";
 import Categories from "../../components/categories/Categories";
 import Products from "../../components/products/Products";
 import Sorting from "../../components/sorting/Sorting";
-import Footer from "../../components/footer/Footer";
 
 const Home = () => {
   const [category, setCategory] = useState("");

@@ -10,10 +10,11 @@ import { getCartTotal } from "../../redux/cartSlice";
 import { useDispatch, useSelector } from "react-redux";
 
 //navigate(router-dom)
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { GiCancel } from "react-icons/gi";
 
 // // // // // // // // // // // // //
-const Navbar = ({ show, setShow }) => {
+const Navbar = () => {
   const dispatch = useDispatch();
   const { carts } = useSelector((state) => state.carts);
 
@@ -24,26 +25,46 @@ const Navbar = ({ show, setShow }) => {
     dispatch(getCartTotal());
   }, [dispatch]);
 
+  const [show, setShow] = useState(false);
   return (
     <div className="content flex flex-col sm:flex-row  items-center justify-between w-full md:w-4/5">
-      <div className="flex w-full justify-evenly   ">
-        <button
-          onClick={() => setShow(!show)}
-          className="cursor-pointer z-10 max-md:absolute max-md:top-1 max-md:left-2"
-        >
-          <HiMenu size={40} style={{ color: "white" }} />
+      <div className="flex w-full justify-evenly">
+        <button className="cursor-pointer z-10 max-md:absolute max-md:top-1 max-md:left-2">
+          <HiMenu
+            onClick={() => setShow(!show)}
+            size={40}
+            style={{ color: "white" }}
+          />
         </button>
 
-        <select className="select w-1/8 font-bold  outline-none rounded-sm p-2 bg-selected text-white  ">
-          <option disabled selected>
-            Change
-          </option>
-          <option>Homer</option>
-          <option>Marge</option>
-          <option>Bart</option>
-          <option>Lisa</option>
-          <option>Maggie</option>
-        </select>
+        <div
+          className={`bg-black fixed top-0 left-0 w-1/4 h-screen flex flex-col z-50 ${
+            show
+              ? "block transition-all duration-500 z-50  "
+              : "hidden transition-all duration-500 z-50 "
+          } `}
+        >
+          <ul className="flex flex-col items-center justify-center h-full w-full z-50 ">
+            <button
+              onClick={() => setShow(!show)}
+              className="bg-white  rounded-full mb-20 cursor-pointer"
+            >
+              <GiCancel size={40} />
+            </button>
+            <li className="cursor-pointer">
+              <Link to={"/"}> Anasayfa</Link>
+            </li>
+            <li className="cursor-pointer">
+              <Link to={"/cart"}> Sepetim</Link>
+            </li>
+            <li className="cursor-pointer">
+              <Link to={"/"}> Ürünler</Link>
+            </li>
+            <li className="cursor-pointer">
+              <Link to={"/"}> İletişim</Link>
+            </li>
+          </ul>
+        </div>
       </div>
 
       <div className="flex flex-row w-full max-md:justify-center max-md:my-4">
