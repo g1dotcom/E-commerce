@@ -61,7 +61,7 @@ const Navbar = () => {
               <Link to={"/hakkımızda"}> Hakkımızda</Link>
             </li>
             <li className="cursor-pointer">
-              <Link to={"/"}> İletişim</Link>
+              <Link to={"/iletisim"}> İletişim</Link>
             </li>
           </ul>
         </div>
@@ -71,35 +71,26 @@ const Navbar = () => {
         <input
           type="text"
           placeholder="Type here"
-          className="input w-96 outline-none rounded-l-sm p-2 ml-4 "
+          className="input w-96 outline-none rounded-none p-2 ml-4 "
         />
         <button className="cursor-pointer">
           <AiOutlineSearch
-            className="border-none rounded-r-sm p-2 "
-            size={40}
+            className="border-none rounded-r-xl p-2 "
+            size={48}
             style={{ color: "white", background: "#f26522" }}
           />
         </button>
       </div>
-      <div className="flex w-full max-md:justify-around ml-4 max-sm:absolute max-md:top-1  ">
-        <div className="flex  relative items-center text-white max-sm:-left-14">
-          <p className="font-bold max-sm:hidden">SEPET</p>
-          <AiOutlineShoppingCart
-            size={30}
-            style={{ color: "white" }}
-            onClick={() => navigate("/cart")}
-            className="cursor-pointer"
-          />
-          <p
-            onClick={() => navigate("/cart")}
-            className="text-white font-bold z-10 cursor-pointer absolute -top-2  right-1 text-sm bg-red-500 rounded-full px-1"
-          >
+      <div className="flex  max-md:justify-around ml-4 max-md:absolute max-md:top-1 max-md:right-2  ">
+        <div
+          onClick={() => navigate("/cart")}
+          className="ml-6 flex items-center cursor-pointer text-white  relative"
+        >
+          <p className="font-bold max-md:hidden ">SEPET</p>
+          <AiOutlineShoppingCart size={35} style={{ color: "white" }} />
+          <p className="text-white font-bold z-10 cursor-pointer absolute top-1 max-md:-top-1  right-1 text-sm bg-red-500 rounded-full px-1">
             {carts?.length}
           </p>
-        </div>
-        <div className="ml-6 flex items-center text-white max-sm:-mr-24 ">
-          <p className="font-bold ">PROFIL</p>
-          <CgProfile size={30} style={{ color: "white" }} />
         </div>
       </div>
     </div>

@@ -32,25 +32,23 @@ const Cart = () => {
         <Navbar />
       </div>
       {carts?.length > 0 ? (
-        <div className="flex  w-full h-full ">
-          <div className="w-3/4 h-full p-6">
+        <div className="flex max-md:flex-col  w-full h-full ">
+          <div className="w-3/4 max-md:w-full h-full p-6">
             {carts?.map((cart, i) => (
               <CartComp key={i} cart={cart} />
             ))}
           </div>
-          <div className="w-1/4 h-full my-10 p-6 bg-orange-400 text-white text-xl font-medium">
+          <div className="w-1/4 max-md:w-full h-full my-10 p-6 bg-orange-400 text-white text-xl font-medium">
             <h1>
-              {" "}
-              Toplam Fiyat:{" "}
-              <span className="bg-white text-orange-400 rounded-full p-2 w-full mt-4 text-2xl font-bold cursor-pointer ">
-                {totalAmount} TL
+              Toplam Fiyat:
+              <span className="bg-white mx-4 text-orange-400 rounded-full p-2 w-full mt-4 text-2xl font-bold cursor-pointer ">
+                {Math.floor(totalAmount)} TL
               </span>
             </h1>
             <br />
             <h1>
-              {" "}
-              Kargo :{" "}
-              <span className="bg-white text-orange-400 rounded-full p-2 w-full mt-4 font-bold cursor-pointer ">
+              Kargo :
+              <span className="bg-white mx-4 text-orange-400 rounded-full p-2 w-full mt-4 font-bold cursor-pointer ">
                 ÜCRETSİZ!
               </span>
             </h1>

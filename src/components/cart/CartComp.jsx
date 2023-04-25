@@ -10,15 +10,17 @@ const CartComp = ({ cart }) => {
   return (
     <div className="my-10 flex items-center justify-between w-full bg-gray-50">
       <img
-        className="w-[150px] h-[150px] object-cover"
+        className="w-[150px] max-md:w-[100px] max-md:h-[100px] h-[150px] object-cover"
         src={cart?.image}
         alt=""
       />
-      <div className="text-left flex items-start w-[476px] ">
-        <h1 className="font-bold text-xl ">{cart?.title}</h1>
-        <p className="text-gray-500">{cart?.description}</p>
+      <div className="text-left flex items-start w-[476px] max-md:w-[300px] ">
+        <h1 className="font-bold text-xl max-md:text-sm max-md:mx-2">
+          {cart?.title}
+        </h1>
+        <p className="text-gray-500 max-md:text-sm">{cart?.description}</p>
       </div>
-      <div className="font-bold text-2xl">
+      <div className="font-bold text-2xl max-md:text-base">
         {cart?.price} TL ({cart?.quantity})
       </div>
       <button
