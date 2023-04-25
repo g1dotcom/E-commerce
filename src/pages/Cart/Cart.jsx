@@ -38,8 +38,20 @@ const Cart = () => {
               <CartComp key={i} cart={cart} />
             ))}
           </div>
-          <div className="w-1/4 h-full my-10 p-6 bg-gray-400">
-            Toplam Fiyat: {totalAmount} TL
+          <div className="w-1/4 h-full my-10 p-6 bg-orange-400 text-white text-xl font-medium">
+            <h1> Toplam Fiyat: {totalAmount} TL</h1>
+            <br />
+            <h1> Kargo : ÜCRETSİZ!</h1>
+            <br />
+            <button className="bg-white text-orange-400 rounded-full p-2 w-full mt-4 font-bold cursor-pointer hover:scale-95 transition-all">
+              Ödeme Yap
+            </button>
+            <button
+              onClick={() => navigate("/")}
+              className="bg-white text-orange-400 rounded-full p-2 w-full mt-4 font-bold cursor-pointer hover:scale-95  "
+            >
+              Sepeti Temizle
+            </button>
           </div>
         </div>
       ) : (
