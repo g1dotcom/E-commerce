@@ -18,6 +18,7 @@ function App() {
           <Route path="/products/:id" element={<Detail />} />
           <Route path="/cart" element={<Cart />} />
         </Routes>
+
         <Footer />
       </BrowserRouter>
     </div>

@@ -33,7 +33,7 @@ const Cart = () => {
       </div>
       {carts?.length > 0 ? (
         <div className="flex  w-full h-full ">
-          <div className="w-3/4 h-[75vh] p-6">
+          <div className="w-3/4 h-full p-6">
             {carts?.map((cart, i) => (
               <CartComp key={i} cart={cart} />
             ))}
