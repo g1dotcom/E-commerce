@@ -27,7 +27,7 @@ const CartComp = ({ cart }) => {
         </h1>
         <p className="text-gray-500 max-md:text-sm">{cart?.description}</p>
       </div>
-      <div className="font-bold text-2xl max-md:text-base">
+      <div className="font-bold text-2xl max-md:text-base max-md:mx-2">
         {cart?.price} TL ({cart?.quantity})
       </div>
       <button
@@ -36,7 +36,7 @@ const CartComp = ({ cart }) => {
           window.location.reload(cart?.id);
           notify();
         }}
-        className="bg-orange-500 px-5 py-2 rounded-md text-white"
+        className="bg-orange-500 max-md:px-2 px-5 py-2 rounded-md text-white"
       >
         Ürünü Sil
       </button>
