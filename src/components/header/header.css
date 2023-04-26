@@ -92,8 +92,12 @@ li a {
     width: 80%;
     font-size: smaller;
     letter-spacing: 0px;
+    justify-content: space-evenly;
   }
   ul {
-    justify-content: space-evenly;
+    justify-content: center;
+  }
+  li a {
+    padding: 14px 10px;
   }
 }
