@@ -59,7 +59,7 @@ const DetailComp = ({ productDetail }) => {
         </div>
         <div className="my-2 text-2xl flex">
           <span className="font-bold">Rating</span> :{" "}
-          <span className="bg-orange-400 mx-2 text-gray-200  rounded-lg">
+          <span className="bg-orange-400 mx-2 text-gray-200  rounded-xl px-2">
             {productDetail?.rating?.rate}
           </span>
           <Rating productDetail={productDetail} />
