@@ -50,14 +50,14 @@ const DetailComp = ({ productDetail }) => {
         src={productDetail?.image}
         alt=""
       />
-      <div className="bg-gray-100 p-10">
+      <div className="bg-gray-100 max-md:p-4 p-10">
         <div className="text-4xl max-md:text-2xl font-bold">
           {productDetail?.title}
         </div>
         <div className="my-2 text-2xl max-md:text-xl">
           {productDetail?.description}
         </div>
-        <div className="my-2 text-2xl flex">
+        <div className="my-2 text-2xl flex ">
           <span className="font-bold">Rating</span> :{" "}
           <span className="bg-orange-400 mx-2 text-gray-200  rounded-xl px-2">
             {productDetail?.rating?.rate}
