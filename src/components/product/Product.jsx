@@ -13,12 +13,13 @@ const Product = ({ product }) => {
       onClick={() => navigate(`products/${product?.id}`)}
       className="w-[350px] max-md:w-[150px] p-2 m-2 border rounded-md relative"
     >
-      <div className="absolute top-0 right-0 p-2 categoriesbaslık flex items-center rounded-md">
-        <FaMoneyBillWave style={{ color: "white" }} /> {product?.price} TL
+      <div className="absolute top-0 right-0 p-2 bg-orange-500 text-white font-bold flex items-center rounded-md">
+        <FaMoneyBillWave style={{ color: "white", marginRight: "5px" }} />{" "}
+        {product?.price} TL
       </div>
 
       <img
-        className="w-[200px] h-[200px] max-md:w-[100px] max-md:h-[100px] object-cover m-auto"
+        className="w-[200px] h-[200px] max-md:w-[100px] max-md:h-[100px] object-cover m-auto cursor-pointer"
         src={product?.image}
         alt=""
       />

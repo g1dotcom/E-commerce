@@ -1,11 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 // Redux
 import { removeFromCart } from "../../redux/cartSlice";
 import { useDispatch } from "react-redux";
 
+//toastify
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 const CartComp = ({ cart }) => {
   const dispatch = useDispatch();
+
+  //toastify
+  const notify = () => toast("Ürün Silindi!!");
 
   return (
     <div className="my-10 flex items-center justify-between w-full bg-gray-50">
@@ -24,13 +31,16 @@ const CartComp = ({ cart }) => {
         {cart?.price} TL ({cart?.quantity})
       </div>
       <button
-        onClick={() =>
-          dispatch(removeFromCart(cart?.id)) + window.location.reload()
-        }
+        onClick={() => {
+          dispatch(removeFromCart(cart?.id));
+          window.location.reload(cart?.id);
+          notify();
+        }}
         className="bg-orange-500 px-5 py-2 rounded-md text-white"
       >
         Ürünü Sil
       </button>
+      <ToastContainer />
     </div>
   );
 };

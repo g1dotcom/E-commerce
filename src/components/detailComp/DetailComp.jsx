@@ -7,20 +7,27 @@ import Rating from "../rating/Rating";
 import { addToCart } from "../../redux/cartSlice";
 import { useDispatch } from "react-redux";
 
+//react toastify
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+// // // // // // // // // // // // //
 const DetailComp = ({ productDetail }) => {
   const dispatch = useDispatch();
   const [quantity, setQuantity] = useState(1);
 
+  //Quantity increment
   const increment = () => {
     setQuantity(quantity + 1);
   };
-
+  //Quantity decrement
   const decrement = () => {
     if (quantity > 1) {
       setQuantity(quantity - 1);
     }
   };
 
+  //Add to cart
   const addBasket = () => {
     dispatch(
       addToCart({
@@ -32,6 +39,9 @@ const DetailComp = ({ productDetail }) => {
       })
     );
   };
+
+  //Toastify
+  const notify = () => toast("Ürün Sepete Eklendi!");
 
   return (
     <div className="flex gap-10 my-10">
@@ -77,10 +87,14 @@ const DetailComp = ({ productDetail }) => {
           </div>
         </div>
         <div
-          onClick={addBasket}
+          onClick={() => {
+            addBasket();
+            notify(productDetail);
+          }}
           className="my-4 border w-full text-2xl rounded-md bg-orange-400 text-white cursor-pointer h-16 flex items-center justify-center"
         >
-          Sepete Ekle
+          <span className="z-50"> Sepete Ekle</span>
+          <ToastContainer />
         </div>
       </div>
     </div>
